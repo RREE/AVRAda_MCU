@@ -1,0 +1,26 @@
+with "avrada_rts.gpr";
+with "avr_tool_options.gpr";
+with "config/avrada_rts_config.gpr";
+
+project AVRAda_MCU is
+
+   for Library_Name use "avrada_mcu";
+   for Library_Dir use "lib";
+   for Library_Kind use "static";
+
+   for Object_Dir use "obj/" & AVRADA_RTS_Config.Build_Profile;
+   for Create_Missing_Dirs use "True";
+   for Target use "avr";
+   for Runtime ("Ada") use AVRADA_RTS'Project_Dir;
+   
+   for Source_Dirs use ("src", "src/" & AVRAda_RTS_Config.AVR_MCU);
+
+   package Compiler is
+      for Default_Switches ("Ada") use AVR_Tool_Options.ALL_ADAFLAGS;
+   end Compiler;
+
+   package Install is
+      for Artifacts (".") use ("share");
+   end Install;
+
+end AVRAda_MCU;
