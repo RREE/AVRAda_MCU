@@ -1,16 +1,17 @@
 name = "avrada_mcu"
 description = "Device (MCU) specific definitions for AVR microcontrollers"
-version = "0.1.0-dev"
+version = "2.0.0-pre_1"
 
 authors = ["Rolf Ebert"]
 maintainers = ["Rolf Ebert <rolf.ebert.gcc@gmx.de>"]
 maintainers-logins = ["RREE"]
-licenses = "GPL-3.0-or-later WITH GCC-exception-3.1"
+licenses = "GPL-2.0-or-later WITH GCC-exception-3.1"
 website = "https://sourceforge.net/projects/avr-ada/"
+tags = ["avr", "embedded", "rts"]
 
 [[depends-on]]
 gnat_avr_elf = "^11"
-avrada_rts = "*"
+avrada_rts = "^2.0.0"
 
 [[pins]]
 avrada_rts = { path = "../AVRAda_RTS" }
