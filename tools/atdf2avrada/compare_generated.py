@@ -4,9 +4,6 @@
 from __future__ import print_function
 import os
 
-old_path = "./old"
-new_path = "../../src"
-
 def compare (old_path, new_path):
     with open (old_path) as f:
         old_raw = f.read ().split ("\n")
