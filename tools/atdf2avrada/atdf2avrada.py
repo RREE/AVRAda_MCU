@@ -226,24 +226,6 @@ def create_registers (obj):
     if caption is None:
         caption = "[%s]" % name
     reg_bitfields = obj.getElements ('bitfield')
-    # default_bits_name = name
-    # default_bits_caption = caption
-
-    # if size == 2:
-    #     if reg_bitfields:
-    #         if len (reg_bitfields) > 1:
-    #             print (name)
-    #             raise ValueError
-    #         bitfield_mask = int (reg_bitfields[0].getAttribute ('mask'), 16)
-    #         if bitfield_mask == mask or mask is None:
-    #             mask = bitfield_mask
-    #             # default_bits_name = reg_bitfields[0].getAttribute ('name')
-    #             # default_bits_caption = reg_bitfields[0].getAttribute ('caption')
-    #             # reg_bitfields = []
-    #         else:
-    #             raise ValueError
-    #     if mask is None:
-    #         raise ValueError
         
     if mask is None:
         mask = 2 ** (8 * size) - 1
