@@ -2,3 +2,5 @@
 /lib/
 /alire/
 /config/
+*.py[cod]
+__pycache__/
